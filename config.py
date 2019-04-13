@@ -1,13 +1,11 @@
- import os
+import os
 
 class Config:
 
-    NEWS_API_BASE_URL ='https://newsapi.org/v2/{}&apiKey={}'
+    NEWS_API_BASE_URL ='https://newsapi.org/v2/everything?q=kenya&language=en&apiKey={}'
     NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
-sources = sources?
-head = ?country=us
 
 class ProdConfig(Config):
     pass
