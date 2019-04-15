@@ -1,5 +1,8 @@
 #title {
     padding-left: 50px;
+}
+
+body {
     font-family: 'Playfair Display', serif;
 }
 
@@ -10,7 +13,21 @@
 }
 
 #headlines {
-    margin-left: 25px;
+    margin-left: 60px;
+}
+
+#sources {
+    width: 1500px;
+    height:60px;
+    background-color:black;
+    color: white;
+    margin-bottom: 5px;
+    left: 0;
+    right: 0;
+}
+
+.btn {
+    background-color: red;
 }
 
 .carousel-caption{
@@ -28,7 +45,9 @@
 }
 
 .card-header {
-    background-color: red;
+    background-color: black;
+    height: 100px;
+    color:white;
 }
 
 .card-body {

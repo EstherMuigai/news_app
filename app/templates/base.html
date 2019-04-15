@@ -5,11 +5,8 @@
 {% endblock %}
 {% block navbar %}
     {% include 'navbar.html' %}
-    {% include 'carousel.html'%}
-     <ul>
-        <h3> Articles </h3>
-        {% for article in articles %}
-            <li>{{ article.title}}</li>
-        {% endfor %}
-    </ul>
 {% endblock %}
+{% block content %}
+    {% include 'carousel.html' %}
+{% endblock %}
+

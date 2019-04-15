@@ -1,5 +1,18 @@
 <div>
     <h1 id="title">AfricaPost</h1>
+</div>
+<div class="row">
+        <div id="sources" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  {% for source in sources %}
+                  <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
+                    <p style="padding-left:5px;text-align:center;">{{source.description}} {{source.country}}
+                        <a href="{{source.url}}" class="btn">{{source.name}}</a>
+                    </p>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
 </div>  
 <div class="row" id="headlines">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" class="col-md-8">
