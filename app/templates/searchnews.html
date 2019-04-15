@@ -1,0 +1,15 @@
+<div class="container-fluid">
+            {% for news_item in news %}
+                    <div class="card" style="width:400px;">
+                            <img class="card-img-top" src="{{news_item.urlToImage}}" alt="Card image cap" style="width:400px;height:300px;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{news_item.title}}</h5>
+                                <p class="card-text">{{news_item.content}}</p>
+                                <a class="btn btn-danger" href="{{news_item.url}}" role="button">Read More...</a>
+                            </div>
+                        </div>
+            {%endfor%}
+    </div>
+
+
+    

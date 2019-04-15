@@ -26,6 +26,10 @@ body {
     right: 0;
 }
 
+#formacros {
+    width:500px;
+}
+
 .btn {
     background-color: red;
 }
@@ -44,14 +48,14 @@ body {
     height:400px;
 }
 
-.card-header {
-    background-color: black;
-    height: 100px;
-    color:white;
+li:hover {
+    background-color: rgb(230, 144, 144);
+    color: black;
 }
 
-.card-body {
-    overflow-y: scroll;
+#newsresults {
+    margin:2px;
+    margin-bottom:2px;
 }
 
 a {

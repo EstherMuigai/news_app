@@ -1,3 +1,4 @@
+{% import "bootstrap/wtf.html" as wtf %}
 <nav class="navbar navbar-expand-lg">
   <a class="navbar-brand" href="#">NEWS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,9 +16,9 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Technology</a>
       </li>
+      <li class="nav-item">
+          {{ wtf.quick_form(search_form) }}
+      </li>
     </ul>
-    <form class="form-inline active-purple-3 active-purple-4" style="float:right;margin-top:7px;">
-        <input class="form-control form-control-md ml-3 w-200" type="text" placeholder="Search" aria-label="Search">
-    </form>
   </div>
 </nav>

@@ -1,3 +1,4 @@
+{% import 'macros.html' as macro%}
 <div>
     <h1 id="title">AfricaPost</h1>
 </div>
@@ -13,7 +14,10 @@
                   {% endfor %}
                 </div>
               </div>
-</div>  
+</div>
+<div class="row" style="margin-left:100px;">
+    <h2>Top Headlines</h2> 
+</div>
 <div class="row" id="headlines">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" class="col-md-8">
                 <div class="carousel-inner">
@@ -37,14 +41,37 @@
                   <span class="sr-only">Next</span>
                 </a>
               </div>
-              <div class="card" style="width:400px;margin-top: 0;" class="col-md-4">
-                <div class="card-header">Top News</div>
-                <div class ="card-body">
+              <div class="card" style="width:400px;margin-top:0;" class="col-md-4">
+                <div  class ="card-body" style="overflow-y: scroll;">
                     <ul class="list-group list-group-flush">
-                        {% for article in articles %}
-                        <li class="list-group-item">{{article.title}}</li>
+                        {% for headline in headlines %}
+                        <a href="{{headline.url}}">
+                            <li class="list-group-item" style="font-size:16px;border-bottom: 1px;">{{headline.title}}<br>Author: {{headline.author}}</li>
+                        </a>
                         {% endfor %}
                      </ul>
                 </div>
               </div>
+</div>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 style="margin-left:50px;">Technology</h2>
+            {{ macro.displayNews(technology)}}
+        </div>
+        <div class="col-md-6">
+            <h2 style="margin-left:50px;">Sports</h2>
+            {{ macro.displayNews(sports)}}
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+          <h2 style="margin-left:50px;">Politics</h2>
+          {{ macro.displayNews(politics)}}
+      </div>
+      <div class="col-md-6">
+          <h2 style="margin-left:50px;">Entertainment</h2>
+          {{ macro.displayNews(entertainment)}}
+      </div>
+    </div>
 </div>
