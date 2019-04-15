@@ -1,0 +1,44 @@
+#title {
+    padding-left: 50px;
+    font-family: 'Playfair Display', serif;
+}
+
+.carousel{
+    width: 760px;
+    height: 400px;
+    margin-left: 20px;
+}
+
+#headlines {
+    margin-left: 25px;
+}
+
+.carousel-caption{
+    width: 700px;
+    background-color: black;
+    text-align: center;
+    left:4%;
+    bottom:0;
+    opacity: 0.9;
+}
+
+.card {
+    margin:0;
+    height:400px;
+}
+
+.card-header {
+    background-color: red;
+}
+
+.card-body {
+    overflow-y: scroll;
+}
+
+a {
+    color: black;
+}
+
+.nav-item{
+    margin-left:10px;
+}

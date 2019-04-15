@@ -1,0 +1,37 @@
+<div>
+    <h1 id="title">AfricaPost</h1>
+</div>  
+<div class="row" id="headlines">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" class="col-md-8">
+                <div class="carousel-inner">
+                  {% for article in articles %}
+                  <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
+                    <img class="d-block w-100" src={{article.urlToImage}}
+                      alt="Current Slide" style="width: 760px;height: 400px;">
+                      <div class="carousel-caption">
+                            <h4>{{article.title}}</h4>
+                            <p>{{article.content}} <a class="label label-primary" href="article.url" target="_blank">Read the entire article...</a></p>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <div class="card" style="width:400px;margin-top: 0;" class="col-md-4">
+                <div class="card-header">Top News</div>
+                <div class ="card-body">
+                    <ul class="list-group list-group-flush">
+                        {% for article in articles %}
+                        <li class="list-group-item">{{article.title}}</li>
+                        {% endfor %}
+                     </ul>
+                </div>
+              </div>
+</div>

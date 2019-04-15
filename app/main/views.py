@@ -6,5 +6,4 @@ from . import main
 @main.route('/')
 def index():
     articles = get_articles()
-    print(get_articles) 
     return render_template('index.html', articles = articles)

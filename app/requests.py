@@ -53,9 +53,28 @@ def process_results(article_list):
         publishedAt = article_item.get('publishedAt')
         content = article_item.get('content')
 
-        if title:
+        if urlToImage:
             article_object = Article(author,title,description,url,urlToImage,publishedAt,content)
             article_results.append(article_object)
 
     return article_results
+
+def get_sources:
+    '''
+    Function that gets the json response to our url request
+    '''
+    get_sources_url = base_url.format(api_key)
+
+    with urllib.request.urlopen(get_articles_url) as url:
+        get_sourcess_data = url.read()
+        get_sources_response = json.loads(get_sourceses_data)
+
+        sources_results = None
+
+        if get_sources_response['articles']:
+            source_results_list = get_articles_response['articles']
+            source_results = process_results(article_results_list)
+        
+        for sources_item in source_results
+            
 

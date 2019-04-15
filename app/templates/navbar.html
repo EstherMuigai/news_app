@@ -1,25 +1,24 @@
-<link rel="stylesheet" href="{{url_for('.static',filename='css/navbar.css')}}">
-<div class="navbar navbar-inverse" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">AfricaPost</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/">Business</a></li>
-                <li><a href="/">Technology</a></li>
-                <li><a href="/">Entertainment</a></li>
-        </div>
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">NEWS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    </div>
-</div>
-<div>
-    <h1>The African Post</h1>
-</div>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Business</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Technology</a>
+      </li>
+    </ul>
+    <form class="form-inline active-purple-3 active-purple-4" style="float:right;margin-top:7px;">
+        <input class="form-control form-control-md ml-3 w-200" type="text" placeholder="Search" aria-label="Search">
+    </form>
+  </div>
+</nav>
