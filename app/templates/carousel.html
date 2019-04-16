@@ -1,13 +1,28 @@
 {% import 'macros.html' as macro%}
-<div>
-    <h1 id="title">AfricaPost</h1>
+{% import "bootstrap/wtf.html" as wtf %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-6">
+              <h1 id="title" style="font-size: 30px; margin:3px;">AFRICAPOST</h1>
+          </div>
+          <div class="col-md-6" style="background-image: url(http://www.logospng.com/images/16/world-wide-web-icon-clipart-best-16240.png);">
+          </div>
+        </div>
+    </div>
+    <div class="col-md-6" style="float: right; width: auto;">
+        {{ wtf.quick_form(search_form,form_type="inline") }}
+    </div>
+</div>
+<div class="row" style="margin-top: 20px;">
+        {{ macro.searchNews(news)}}
 </div>
 <div class="row">
         <div id="sources" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
+                <div class="carousel-inner"style="font-size:15px;">
                   {% for source in sources %}
                   <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
-                    <p style="padding-left:5px;text-align:center;">{{source.description}} {{source.country}}
+                    <p style="padding-left:5px;text-align:center;">{{source.description}} ({{source.country}})
                         <a href="{{source.url}}" class="btn">{{source.name}}</a>
                     </p>
                   </div>
@@ -53,7 +68,7 @@
                 </div>
               </div>
 </div>
-<div class="wrapper">
+<div class="wrapper" style="margin-left: 100px; margin-top:10px; ">
     <div class="row">
         <div class="col-md-6">
             <h2 style="margin-left:50px;">Technology</h2>
@@ -67,9 +82,11 @@
     <div class="row">
       <div class="col-md-6">
           <h2 style="margin-left:50px;">Politics</h2>
+          <i class="fas fa-star"></i>
           {{ macro.displayNews(politics)}}
       </div>
       <div class="col-md-6">
+          <i class="fas fa-star"></i>
           <h2 style="margin-left:50px;">Entertainment</h2>
           {{ macro.displayNews(entertainment)}}
       </div>

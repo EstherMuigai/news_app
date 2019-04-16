@@ -13,14 +13,11 @@ def index():
     politics = get_articles('politics')
     entertainment = get_articles('entertainment')
     sources = get_sources()
+    news = []
     form = SearchForm()
     search_item = form.search.data
     if form.validate_on_submit():
-        new_search(search_item)
-    return render_template('index.html',search_form = form, articles = articles, sources = sources, headlines = headlines, technology = technology, sports = sports, politics = politics, entertainment =entertainment )
-
-@main.route('/searchnews')
-def new_search(search_item):
-    news = []
-    news = get_articles(search_item)
-    return render_template('searchnews.html', news = news)
+        news = []
+        search_item = form.search.data
+        news = get_articles(search_item)
+    return render_template('index.html',news = news,search_form = form, articles = articles, sources = sources, headlines = headlines, technology = technology, sports = sports, politics = politics, entertainment =entertainment )

@@ -30,8 +30,13 @@ body {
     width:500px;
 }
 
+nav {
+    background-color: #ef767a;
+    font-size: 20px;
+}
+
 .btn {
-    background-color: red;
+    background-color: #2673ef;
 }
 
 .carousel-caption{
@@ -46,6 +51,7 @@ body {
 .card {
     margin:0;
     height:400px;
+    background-clip: #49BEAA;
 }
 
 li:hover {

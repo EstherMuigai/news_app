@@ -5,7 +5,7 @@
           <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
             <img class="d-block w-100" src={{item.urlToImage}}
               alt="Current Slide" style="width: 500px;height: 400px;">
-              <div class="carousel-caption" style="width:500px;">
+              <div class="carousel-caption" style="width:400px;margin:3px;">
                     <h4>{{item.title}}</h4>
                     <p>{{item.content}} <a class="label label-primary" href="article.url" target="_blank">Read the entire article...</a></p>
             </div>
@@ -21,4 +21,20 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+{% endmacro %}
+
+{% macro searchNews(news) %}
+{% if news %}
+<h2 style="margin-left:50px;">News Search</h2> 
+{% endif %}
+{% for news_item in news %}
+    <div class="card" style="width:400px;">
+        <img class="card-img-top" src="{{news_item.urlToImage}}" alt="Card image cap" style="width:400px;height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">{{news_item.title}}</h5>
+            <p class="card-text">{{news_item.content}}</p>
+            <a class="btn btn-danger" href="{{news_item.url}}" role="button">Read More...</a>
+        </div>
+    </div>
+{%endfor%}
 {% endmacro %}
