@@ -5,4 +5,4 @@ from wtforms.validators import Required
 class SearchForm(FlaskForm):
 
     search = StringField('Search for News',validators=[Required()])
-    submit = SubmitField('Submit')
+    submit = SubmitField('Search')
