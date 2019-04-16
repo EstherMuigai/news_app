@@ -4,7 +4,7 @@ from . import main
 from .forms import SearchForm
 
 # Views
-@main.route('/main', methods = ['GET','POST'])
+@main.route('/', methods = ['GET','POST'])
 def index():
     articles = get_articles('kenya')
     headlines = get_articles('headlines')
